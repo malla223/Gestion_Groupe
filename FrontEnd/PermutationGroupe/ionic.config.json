@@ -1,0 +1,7 @@
+{
+  "name": "PermutationGroupe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
