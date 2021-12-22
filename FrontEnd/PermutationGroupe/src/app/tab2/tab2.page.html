@@ -18,18 +18,18 @@
         <ion-grid >
           <ion-list>
             <ion-row >
-              <ion-col ><b>#</b></ion-col>
-              <ion-col > <b>Nom</b> </ion-col>
+              <ion-col ><b>Nom</b></ion-col>
+              <ion-col > <b>Numéro</b> </ion-col>
               <ion-col ><b>Actions</b>  </ion-col>
             </ion-row>
          </ion-list>
       
-          <ion-row>
-            <ion-col>hsdvhfv</ion-col>
-            <ion-col>jhsdfjh</ion-col>
+          <ion-row *ngFor="let liste of list">
+            <ion-col>{{liste.nomApprenant}}</ion-col>
+            <ion-col>{{liste.numero}}</ion-col>
             <ion-col>
               <ion-icon color="success" name="create"></ion-icon>
-              <ion-icon color="danger" name="trash"></ion-icon>
+              <ion-icon (click)="deleteA(liste.id_Apprenant)" color="danger" name="trash"></ion-icon>
               <ion-icon color="success" name="eye" [routerLink]="['/detail']"></ion-icon>
             </ion-col>
           </ion-row>
