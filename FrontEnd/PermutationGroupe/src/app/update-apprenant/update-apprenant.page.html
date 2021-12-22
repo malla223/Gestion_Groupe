@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons >
+    <ion-title>Modifier Apprenant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cardg">
+    <ion-img src="assets/images/ajout.png"></ion-img>
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+         <ion-input type="text" [(ngModel)]="apprenant.nomApprenant" name="nom"><b>Nom Complet :</b></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="email" [(ngModel)]="apprenant.emailApprenant" name="email"><b>E-mail :</b></ion-input>
+         </ion-item>
+         <ion-item>
+          <ion-input type="text" [(ngModel)]="apprenant.numero" name="numero"><b>Numéro :</b></ion-input>
+         </ion-item>
+         <ion-button (click)="onSubmit()" color="success">MODIFIER</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

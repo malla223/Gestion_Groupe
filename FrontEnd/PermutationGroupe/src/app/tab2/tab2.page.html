@@ -28,7 +28,7 @@
             <ion-col>{{liste.nomApprenant}}</ion-col>
             <ion-col>{{liste.numero}}</ion-col>
             <ion-col>
-              <ion-icon color="success" name="create"></ion-icon>
+              <ion-icon [routerLink]="['/update',liste.id_Apprenant]"  color="success" name="create"></ion-icon>
               <ion-icon (click)="deleteA(liste.id_Apprenant)" color="danger" name="trash"></ion-icon>
               <ion-icon [routerLink]="['/detail',liste.id_Apprenant]" color="success" name="eye"></ion-icon>
             </ion-col>

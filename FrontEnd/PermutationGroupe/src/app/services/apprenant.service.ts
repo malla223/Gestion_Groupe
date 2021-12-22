@@ -28,12 +28,12 @@ export class ApprenantService {
     return this.http.post(baseUrl + '/addApprenant', data);
   }
 
-  updateApprenant(id_Apprenant: any, data: any){
-    return this.http.put(baseUrl + '/updateApprenant'+id_Apprenant, data);
+  updateApprenant(id_Apprenant: any, data: any): Observable<any> {
+    return this.http.put(`${baseUrl + '/updateApprenant'}/${id_Apprenant}`, data);
   }
 
-  deleteApprenant(id_Apprenant: any) {
-    return this.http.delete(baseUrl+'/deleteApprenant'+id_Apprenant);
+  deleteApprenant(id_Apprenant: any): Observable<any> {
+    return this.http.delete(`${baseUrl+'/deleteApprenant'}/${id_Apprenant}`);
   }
    
 }
