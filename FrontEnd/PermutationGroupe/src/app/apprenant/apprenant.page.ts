@@ -3,12 +3,15 @@ import { Apprenant } from '../Classe/apprenant';
 import { ApprenantService } from '../services/apprenant.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-apprenant',
   templateUrl: './apprenant.page.html',
   styleUrls: ['./apprenant.page.scss'],
 })
 export class ApprenantPage implements OnInit {
+ 
+
   constructor(private aservice: ApprenantService, private  route: Router) { }
 
   apprenant : Apprenant = {
@@ -17,8 +20,7 @@ export class ApprenantPage implements OnInit {
     numero: ''
   };
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   saveApprenant(): any {
     const data = {
