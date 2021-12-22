@@ -48,6 +48,7 @@ public class AdministrateurController {
         administrateurServiceImp.delete_admin(id);
     }
 
+    @CrossOrigin("*")
     @GetMapping("/login/{login}/{password}")
     public Administrateur loginUser(@PathVariable String login, @PathVariable String password) {
         return administrateurServiceImp.LoginUser(login, password);

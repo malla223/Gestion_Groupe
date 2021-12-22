@@ -13,15 +13,15 @@
     <ion-card>
       <ion-card-content>
         <ion-item>
-         <ion-input><b>Nom Complet :</b></ion-input>
+         <ion-input type="text" [(ngModel)]="apprenant.nomApprenant" name="nom"><b>Nom Complet :</b></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input><b>E-mail :</b></ion-input>
+          <ion-input type="email" [(ngModel)]="apprenant.emailApprenant" name="email"><b>E-mail :</b></ion-input>
          </ion-item>
          <ion-item>
-          <ion-input><b>Numéro :</b></ion-input>
+          <ion-input type="text" [(ngModel)]="apprenant.numero" name="numero"><b>Numéro :</b></ion-input>
          </ion-item>
-         <ion-button color="success">ENREGISTRER</ion-button>
+         <ion-button (click)="saveApprenant()" color="success">ENREGISTRER</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
