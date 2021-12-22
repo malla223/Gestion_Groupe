@@ -1,8 +1,7 @@
 package com.groupeApprenant.demo.Services;
 
-import com.groupeApprenant.demo.Models.Groupe;
+
 import com.groupeApprenant.demo.Models.Tache;
-import com.groupeApprenant.demo.Repositories.GroupeRepositories;
 import com.groupeApprenant.demo.Repositories.TacheRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +30,7 @@ public class TacheServiceImp implements TacheService{
     @Override
     public List<Tache> list_tache() {
         List<Tache> liste = new ArrayList<>();
-        liste = tacheRepositories.findAll();
+        liste = tacheRepositories.afficher_tache();
         return liste;
     }
 
@@ -45,9 +44,4 @@ public class TacheServiceImp implements TacheService{
         tacheRepositories.delete_tache(id);
     }
 
-    /*
-    *  @Override
-    public void delete_admin(Long id) {
-        administrateurRepositories.delete_administrateur(id);
-    }*/
 }

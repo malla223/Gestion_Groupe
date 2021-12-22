@@ -1,8 +1,6 @@
 package com.groupeApprenant.demo.Services;
 
-import com.groupeApprenant.demo.Models.Apprenant;
 import com.groupeApprenant.demo.Models.Groupe;
-import com.groupeApprenant.demo.Repositories.ApprenantRepositories;
 import com.groupeApprenant.demo.Repositories.GroupeRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,7 +31,7 @@ public class GroupeServiceImp implements GroupeService{
     @Override
     public List<Groupe> list_grp() {
         List<Groupe> liste = new ArrayList<>();
-        liste = groupeRepositories.findAll();
+        liste = groupeRepositories.afficher_groupe();
         return liste;
     }
 

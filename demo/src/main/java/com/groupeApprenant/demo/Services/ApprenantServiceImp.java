@@ -29,9 +29,10 @@ public class ApprenantServiceImp implements ApprenantService{
     @Override
     public List<Apprenant> list_app() {
         List<Apprenant> liste = new ArrayList<>();
-        liste = apprenantRepositories.findAll();
+        liste = apprenantRepositories.afficher_apprenant();
         return liste;
     }
+
 
     @Override
     public Apprenant afficher_app_by_id(Long id) {

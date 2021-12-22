@@ -33,7 +33,7 @@ public class AdministrateurServiceImp implements AdministrateurService{
     @Override
     public List<Administrateur> list_admin() {
         List<Administrateur> liste = new ArrayList<>();
-        liste = administrateurRepositories.findAll();
+        liste = administrateurRepositories.afficher_administrateur();
         return liste;
     }
 
