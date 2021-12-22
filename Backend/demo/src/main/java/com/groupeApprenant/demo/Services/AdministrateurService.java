@@ -1,10 +1,11 @@
 package com.groupeApprenant.demo.Services;
 
 import com.groupeApprenant.demo.Models.Administrateur;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public interface AdministrateurService {
 
     // Gestion des Administrateurs
@@ -17,6 +18,7 @@ public interface AdministrateurService {
     public Administrateur afficher_admin_by_id(Long id);
 
     public void delete_admin(Long id);
-    Optional<Administrateur> LoginUser(String login, String password);
+
+    Administrateur LoginUser(String login, String password);
 
 }

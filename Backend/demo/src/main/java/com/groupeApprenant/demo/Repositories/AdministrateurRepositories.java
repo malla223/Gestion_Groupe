@@ -13,8 +13,8 @@ import java.util.Optional;
 @Transactional
 public interface AdministrateurRepositories extends JpaRepository<Administrateur, Long> {
 
-    Optional<Administrateur> getUserByLoginAndPassword(@PathVariable("login") String login, @PathVariable("password") String password);
+    Administrateur getAdministrateurByLoginAndPassword(String login,  String password);
     @Modifying
     @Query(value="UPDATE  Administrateur SET etat = 'inactif' WHERE id_Admin = :id ")
-    void delete_administrateur(Long id);
+    void delete_administrateur(@Param("id") Long id);
 }

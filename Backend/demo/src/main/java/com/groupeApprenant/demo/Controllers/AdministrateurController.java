@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin("*")
-@Controller
+@RestController
 @RequestMapping("/api/administrateur")
 
 public class AdministrateurController {
@@ -48,8 +48,8 @@ public class AdministrateurController {
         administrateurServiceImp.delete_admin(id);
     }
 
-    @GetMapping("/login/{login}&{password}")
-    public Optional<Administrateur> loginUser(@PathVariable("login") String login, @PathVariable("password") String password) {
+    @GetMapping("/login/{login}/{password}")
+    public Administrateur loginUser(@PathVariable String login, @PathVariable String password) {
         return administrateurServiceImp.LoginUser(login, password);
     }
 

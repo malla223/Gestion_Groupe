@@ -48,8 +48,8 @@ public class AdministrateurServiceImp implements AdministrateurService{
     }
 
     @Override
-    public Optional<Administrateur> LoginUser(String login, String password) {
-        return administrateurRepositories.getUserByLoginAndPassword(login, password);
+    public Administrateur LoginUser(String login, String password) {
+        return administrateurRepositories.getAdministrateurByLoginAndPassword(login, password);
     }
 
 }
