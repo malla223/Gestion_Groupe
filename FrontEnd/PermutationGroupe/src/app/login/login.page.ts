@@ -7,6 +7,7 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  
   constructor(private aservice: AdminService) { }
 
   ngOnInit() {

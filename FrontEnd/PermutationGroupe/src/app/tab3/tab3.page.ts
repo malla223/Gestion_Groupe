@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  public searchField: FormControl;
 
-  constructor() {}
+  constructor() {this.searchField = new FormControl('');}
 
 }

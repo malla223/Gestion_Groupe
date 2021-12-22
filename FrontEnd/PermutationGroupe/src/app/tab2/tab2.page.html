@@ -1,8 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
-    <ion-buttons slot="end">
-      <ion-icon (click)="exportExcel()" color="success" name="download"></ion-icon>
-    </ion-buttons>
     <ion-title>
      <b>Liste des Apprenants</b>
     </ion-title>
@@ -16,7 +13,7 @@
         <ion-label><b>Ajouter Un nouveau</b></ion-label>
           <ion-icon [routerLink]="['/apprenant']" color="success" name="add-circle" slot="end" fill="clear"></ion-icon>
       </ion-item>
-    <ion-searchbar placeholder="Recherche"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="filterTerm" animated="true" placeholder="Recherche"></ion-searchbar>
       <ion-card-content>
         <ion-grid >
           <ion-list>
@@ -27,13 +24,13 @@
             </ion-row>
          </ion-list>
       
-          <ion-row *ngFor="let liste of list">
+          <ion-row *ngFor="let liste of list | filter:filterTerm">
             <ion-col>{{liste.nomApprenant}}</ion-col>
             <ion-col>{{liste.numero}}</ion-col>
             <ion-col>
               <ion-icon color="success" name="create"></ion-icon>
               <ion-icon (click)="deleteA(liste.id_Apprenant)" color="danger" name="trash"></ion-icon>
-              <ion-icon color="success" name="eye" [routerLink]="['/detail']"></ion-icon>
+              <ion-icon [routerLink]="['/detail',liste.id_Apprenant]" color="success" name="eye"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-grid>

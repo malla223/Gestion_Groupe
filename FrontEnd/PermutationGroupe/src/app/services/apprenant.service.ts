@@ -20,32 +20,20 @@ export class ApprenantService {
     return this.http.get<Apprenant[]>(baseUrl + '/listApprenant');
   }
 
-  getApprenantById(id: any): Observable<Apprenant> {
-    return this.http.get(`${baseUrl + '/detailApprenant'}/${id}`);
+  getApprenantById(id_Apprenant: any): Observable<Apprenant> {
+    return this.http.get(`${baseUrl + '/detailApprenant'}/${id_Apprenant}`);
   }
 
   saveApprenant(data: any): Observable<any> {
     return this.http.post(baseUrl + '/addApprenant', data);
   }
 
-  updateApprenant(id: any, data: any): Observable<any> {
-    return this.http.put(`${baseUrl + '/updateApprenant'}/${id}`, data);
+  updateApprenant(id_Apprenant: any, data: any){
+    return this.http.put(baseUrl + '/updateApprenant'+id_Apprenant, data);
   }
 
-  deleteApprenant(id: any): Observable<any> {
-    return this.http.delete(`${baseUrl + '/deleteApprenant'}/${id}`);
+  deleteApprenant(id_Apprenant: any) {
+    return this.http.delete(baseUrl+'/deleteApprenant'+id_Apprenant);
   }
-
-
-  //  exportToExcel(data, filename) {
-  //   {
-  //   const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(data);
-  //   const wb: XLSX.WorkBook = XLSX.utils.book_new();
-  //   XLSX.utils.book_append_sheet(wb, ws, filename);
-  //   XLSX.writeFile(wb, filename);
-  //   }
-  //   }
-
-
    
 }
