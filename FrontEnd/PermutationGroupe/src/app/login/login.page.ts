@@ -29,6 +29,7 @@ export class LoginPage implements OnInit {
       localStorage.setItem("admin", res);
       localStorage.setItem("admin", res.admin);
       localStorage.setItem("login", res.login);
+      // localStorage.setItem("id_Admin", res.admin.id_Admin);
       // localStorage.setItem("login", res.admin.login);
       // localStorage.setItem("nom", res.admin.nom);
       // localStorage.setItem("password", res.admin.password);
