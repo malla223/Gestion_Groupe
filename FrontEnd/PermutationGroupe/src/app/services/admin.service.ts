@@ -15,4 +15,8 @@ export class AdminService {
   saveAdmin(data: any): Observable<any> {
     return this.http.post(baseUrl + '/addAdministrateur', data);
   }
+
+  connexion(login: String, password: String){
+    return this.http.get(baseUrl + '/login/' + login + '/' + password);
+  }
 }
