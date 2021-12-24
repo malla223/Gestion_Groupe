@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Generer Groupe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-card-header>
+        <ion-tittle><b>Renseigner les champs</b></ion-tittle>
+      </ion-card-header>
+  </ion-item>
+    <ion-card-content>
+      <form>
+        <ion-item>
+          <ion-input type="number" placeholder="Nombre de groupe"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="number" placeholder="Nombre de participant"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Selectionner tache</ion-label>
+          <ion-select>
+            <ion-select-option value="brown">IONIC</ion-select-option>
+            <ion-select-option value="blonde">FLUTTER</ion-select-option>
+            <ion-select-option value="black">SPRING</ion-select-option>
+            <ion-select-option value="red">ANGULAR</ion-select-option>
+          </ion-select>
+        </ion-item>
+       <ion-button type="submit" [routerLink]="['/tab3']" color="success">GENERER</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
   },
   {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule)
+  },
+  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
@@ -39,7 +43,12 @@ const routes: Routes = [
   {
     path: 'update/:id_Apprenant',
     loadChildren: () => import('./update-apprenant/update-apprenant.module').then( m => m.UpdateApprenantPageModule)
+  },
+  {
+    path: 'genere',
+    loadChildren: () => import('./generer-groupe/generer-groupe.module').then( m => m.GenererGroupePageModule)
   }
+
 
 ];
 @NgModule({
