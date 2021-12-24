@@ -1,0 +1,119 @@
+Pseudo code
+
+HOME PAGE
+la fonction qui vous rediriger vers la page de connexion
+
+la fonction qui vous redirige vers la page d'insciption
+
+PAGE DE CONNEXION
+
+créer la variable pour stocker les informations saisies par l'utilisateur
+la fonction qui envoie les informations de connexion
+ créer loading de patience
+ 
+ envoyer les information de de connexion
+ retourner les données dans une variable reponse
+ 
+	if(si la reponse n'est pas vide)
+			stocker les informations dans local storage
+			rediriger vers la page d'acceuil
+if information est correcte et existe dans notre base de donnee then execution (acces a la page d'accueil)
+
+else(sinon)
+créer la variable qui va stocker l'erreur
+
+créer la fonction d'alert d'erreur
+
+
+	sinon
+		declancher la fonction d'erreur
+ 
+ 
+ 
+
+PAGE D'ACCEUIL
+creer une variable qui va permetre de stocker localement le dernier groupe creer aleatoirement dans le systeme avec les information
+creer une variable  qui va recuperer ces informations dans le local storage et l'afficher avec ces informations
+
+
+
+
+page Liste Apprenant
+
+créer une variable utilisateur
+créer une valiable Administrateur
+créer une liste
+stocker les informations de utilisateur 
+transformer les informations de l'utilisateur en format JSON
+recuperer la liste des apprenant a trevers un formulaire
+page liste apprenant fonction Ajouter
+creer un variable qui va stocker les donnees du formulaire
+creer un variable qui permettre d'afficher ces données dans la liste 
+stocker la liste des apprenants dans la variable liste
+if Apprenant existe dnas le systeme afficher
+else(sinon) 
+creer une alert avec un message
+
+
+
+
+
+page liste apprenant fonction modifier
+
+creer une variable qui permetre de cliquer sur le boutton  
+creer une valiable qui va permettre de stocker les informations
+creer une fonction recuperer les informations a modifier a travers son identifiants
+IF l'identifiant existe
+afficher dans le formulaire de modification
+crrer une variable qui va permettre d'enregister ces informations dans le systeme
+ELSE cteer une alerte d'erreur
+
+
+
+
+ liste apprenant fonction supprimer
+
+creer une variable qui va permetre de cliquer sur le boutton  
+creer une valiable qui va permettre de stocker les informations
+creer une fonction recuperer les informations a supprimer a travers son identifiants
+créer une variable qui va permettre de supprimer
+ 
+ 
+ 
+ 
+ page liste apprenant fonction details
+ 
+ creer une variable qui permetre de cliquer sur le boutton  
+creer une valiable qui va permettre de stocker les informations
+creer une fonction recuperer les informations d'un Apprenant a travers son identifiants
+IF l'identifiant existe
+afficher ces informations
+créer une variable qui va permettre d'enregister ces informations dans le systeme
+ELSE cteer une alerte d'erreur
+
+
+
+
+page des differents groupes
+
+créer une variablequi va permetre de créer les differents groupes aleatoirement
+créer une fonction qui va permetre de repartir les Apprenants a trevers la liste Apprenant existant
+créer une variable qui va permettre d'afficher les groupes créer 
+créer une variable qui va stocker les information du groupes a travers son identifiants 
+IF l'identifiant existe
+afficher ces informations
+créer une variable qui va permettre d'enregister ces informations dans le systeme et zen local
+ELSE cteer une alerte d'erreur
+
+
+
+
+
+page liste apprenant fonction Supprimer
+creer une variable qui va permetre de cliquer sur le boutton  
+creer une valiable qui va permettre de stocker les informations
+creer une fonction recuperer les informations a supprimer a travers son identifiants
+créer une variable qui va permettre de supprimer
+
+
+
