@@ -1,0 +1,15 @@
+			CHARTE GRAPHIQUE
+	
+		 Gestion Aleatoire des groupes
+
+
+	Code Couleur : 
+	
+		. Vert : #2dd36f;
+	
+		. Noir : #222428;
+
+		. Blanc : #ffffff;
+
+
+	Typographie : Arial Black	
